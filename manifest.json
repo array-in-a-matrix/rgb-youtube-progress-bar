@@ -21,7 +21,6 @@
     {
       "matches": ["*://*.youtube.com/*"],
       "js": ["index.js"],
-      "css": ["colors.css"]
     }
   ],
 
