@@ -1,6 +1,6 @@
 const CSS = `
 .ytp-play-progress,
-.ytp-swatch-background-color, div {
+.ytp-swatch-background-color {
   animation: RGB 25s ease-in-out infinite;  
 }
 
