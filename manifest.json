@@ -5,6 +5,13 @@
 
   "description": "Makes the YouTube progress bar cycle through different RGB colors.",
 
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "tensor@arrayinamatrix.xyz",
+    "strict_min_version": "42.0"
+  }
+}
+
   "icons": {
     "48": "icons/icon-48.jpg",
     "96": "icons/icon-96.jpg"
