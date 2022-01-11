@@ -20,7 +20,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
-      "js": ["index.js"],
+      "js": ["index.js"]
     }
   ],
 
