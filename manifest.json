@@ -6,23 +6,21 @@
   "description": "Makes the YouTube progress bar cycle through different RGB colors.",
 
   "browser_specific_settings": {
-  "gecko": {
-    "id": "tensor@arrayinamatrix.xyz",
-    "strict_min_version": "48.0"
-  }
-},
+    "gecko": {
+      "id": "tensor@arrayinamatrix.xyz",
+      "strict_min_version": "48.0"
+    }
+  },
 
   "icons": {
     "48": "icons/icon-48.jpg",
     "96": "icons/icon-96.jpg"
   },
 
-  "content_scripts": [
-    {
-      "matches": ["*://*.youtube.com/*"],
-      "js": ["index.js"]
-    }
-  ],
+  "content_scripts": [{
+    "matches": ["*://*.youtube.com/*"],
+    "js": ["index.js"]
+  }],
 
   "background": {
     "scripts": ["index.js"]
