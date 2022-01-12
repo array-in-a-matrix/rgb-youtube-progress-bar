@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "RGB YouTube",
-  "version": "2.0",
+  "version": "2.1",
 
   "description": "Makes the YouTube progress bar cycle through different RGB colors.",
 
