@@ -1,7 +1,8 @@
 {
+
   "manifest_version": 2,
   "name": "RGB YouTube",
-  "version": "1.1",
+  "version": "2.0",
 
   "description": "Makes the YouTube progress bar cycle through different RGB colors.",
 
@@ -19,17 +20,8 @@
 
   "content_scripts": [{
     "matches": ["*://*.youtube.com/*"],
-    "js": ["index.js"]
-  }],
+    "js": ["index.js"],
+    "css": ["style.css"]
+  }]
 
-  "background": {
-    "scripts": ["index.js"]
-  },
-
-  "page_action": {
-    "default_icon": "icons/off.svg",
-    "browser_style": true
-  },
-
-  "permissions": ["activeTab", "tabs"]
 }

@@ -1,157 +1,71 @@
-const CSS = `
-.ytp-play-progress,
-.ytp-swatch-background-color {
-  animation: RGB 25s ease-in-out infinite;  
-}
+// const CSS = `
+// .ytp-play-progress,
+// .ytp-swatch-background-color {
+//   animation: RGB 25s ease-in-out infinite;  
+// }
 
-@keyframes RGB {
-  from {
-      background-color: #FF0000;
-  }
+// @keyframes RGB {
+//   from {
+//       background-color: #FF0000;
+//   }
 
-  7% {
-      background-color: #FF7700;
-  }
+//   7% {
+//       background-color: #FF7700;
+//   }
 
-  14% {
-      background-color: #FFDD00;
-  }
+//   14% {
+//       background-color: #FFDD00;
+//   }
 
-  21% {
-      background-color: #00FF00;
-  }
+//   21% {
+//       background-color: #00FF00;
+//   }
 
-  28% {
-      background-color: #0000FF;
-  }
+//   28% {
+//       background-color: #0000FF;
+//   }
 
-  35% {
-      background-color: #8A2BE2;
-  }
+//   35% {
+//       background-color: #8A2BE2;
+//   }
 
-  42% {
-      background-color: #C77DF3;
-  }
+//   42% {
+//       background-color: #C77DF3;
+//   }
 
-  49% {
-      background-color: #C77DF3;
-  }
+//   49% {
+//       background-color: #C77DF3;
+//   }
 
-  56% {
-      background-color: #8A2BE2;
-  }
+//   56% {
+//       background-color: #8A2BE2;
+//   }
 
-  63% {
-      background-color: #0000FF;
-  }
+//   63% {
+//       background-color: #0000FF;
+//   }
 
-  70% {
-      background-color: #00FF00;
-  }
+//   70% {
+//       background-color: #00FF00;
+//   }
 
-  77% {
-      background-color: #FFDD00;
-  }
+//   77% {
+//       background-color: #FFDD00;
+//   }
 
-  84% {
-      background-color: #FF7700;
-  }
+//   84% {
+//       background-color: #FF7700;
+//   }
 
-  91% {
-      background-color: #FF0000;
-  }
-}
-`;
+//   91% {
+//       background-color: #FF0000;
+//   }
+// }
+// `;
 
-const TITLE_APPLY = "Apply CSS";
-const TITLE_REMOVE = "Remove CSS";
-const APPLICABLE_PROTOCOLS = ["http:", "https:"];
-
-/*
-Toggle CSS: based on the current title, insert or remove the CSS.
-Update the page action's title and icon to reflect its state.
-*/
-function toggleCSS(tab) {
-
-  function gotTitle(title) {
-    if (title === TITLE_APPLY) {
-      browser.pageAction.setIcon({
-        tabId: tab.id,
-        path: "icons/on.svg"
-      });
-      browser.pageAction.setTitle({
-        tabId: tab.id,
-        title: TITLE_REMOVE
-      });
-      browser.tabs.insertCSS({
-        code: CSS
-      });
-    } else {
-      browser.pageAction.setIcon({
-        tabId: tab.id,
-        path: "icons/off.svg"
-      });
-      browser.pageAction.setTitle({
-        tabId: tab.id,
-        title: TITLE_APPLY
-      });
-      browser.tabs.removeCSS({
-        code: CSS
-      });
-    }
-  }
-
-  var gettingTitle = browser.pageAction.getTitle({
-    tabId: tab.id
-  });
-  gettingTitle.then(gotTitle);
-}
-
-/*
-Returns true only if the URL's protocol is in APPLICABLE_PROTOCOLS.
-Argument url must be a valid URL string.
-*/
-function protocolIsApplicable(url) {
-  const protocol = (new URL(url)).protocol;
-  return APPLICABLE_PROTOCOLS.includes(protocol);
-}
-
-/*
-Initialize the page action: set icon and title, then show.
-Only operates on tabs whose URL's protocol is applicable.
-*/
-function initializePageAction(tab) {
-  if (protocolIsApplicable(tab.url)) {
-    browser.pageAction.setIcon({
-      tabId: tab.id,
-      path: "icons/off.svg"
-    });
-    browser.pageAction.setTitle({
-      tabId: tab.id,
-      title: TITLE_APPLY
-    });
-    browser.pageAction.show(tab.id);
-  }
-}
-
-/*
-When first loaded, initialize the page action for all tabs.
-*/
-var gettingAllTabs = browser.tabs.query({});
-gettingAllTabs.then((tabs) => {
-  for (let tab of tabs) {
-    initializePageAction(tab);
-  }
-});
-
-/*
-Each time a tab is updated, reset the page action for that tab.
-*/
-browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
-  initializePageAction(tab);
-});
-
-/*
-Toggle CSS when the page action is clicked.
-*/
-browser.pageAction.onClicked.addListener(toggleCSS);
+pageMod.PageMod( {
+    include: '*',
+    contentStyleFile: [
+      data.url( 'style.css' )
+    ]
+  })
