@@ -2,7 +2,7 @@
 
 ## You can install the extension [here](https://addons.mozilla.org/addon/rgb-youtube-progress-bar/).
 
-Firefox extension that makes the YouTube progress bar cycle colors. This extension also works on the progress bar of advertisements.
+Firefox extension that makes the YouTube progress bar of videos and advertisements cycle colors. [Invidious](https://invidious.io/)'s progress bar is also supported.
 
 <br>
 
