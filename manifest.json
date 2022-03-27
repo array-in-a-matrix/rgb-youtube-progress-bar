@@ -10,7 +10,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "tensor@arrayinamatrix.xyz",
-      "strict_min_version": "48.0"
+      "strict_min_version": "52.0"
     }
   },
 
