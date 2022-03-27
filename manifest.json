@@ -3,6 +3,7 @@
   "manifest_version": 2,
   "name": "RGB YouTube",
   "version": "3.0",
+  "author": "Array in a Matrix",
 
   "description": "Makes the YouTube progress bar cycle through different RGB colors.",
 
