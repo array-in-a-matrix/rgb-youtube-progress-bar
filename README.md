@@ -29,8 +29,6 @@ The following video sharing/hosting websites are also supported:
 - https://tube.cthd.icu/
 - https://invidious.048596.xyz/
 
-
-
 <br>
 
 <a href="https://www.vecteezy.com/free-vector/rgb-color-wheel">
