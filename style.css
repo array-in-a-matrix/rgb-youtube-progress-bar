@@ -1,9 +1,13 @@
 .ytp-play-progress,
 .ytp-swatch-background-color,
-
-.vjs-play-progress 
-,.vjs-slider-bar
-{
+/* YouTube */
+.vjs-play-progress,
+.vjs-slider-bar,
+/* Invidious */
+/* Odysee */
+.played
+/* Vimeo */
+    {
     animation: RGB 25s ease-in-out infinite;
 }
 
@@ -20,7 +24,7 @@
 
     14% {
         background-color: #FFDD00;
-        color:  #FFDD00;
+        color: #FFDD00;
     }
 
     21% {
@@ -65,7 +69,7 @@
 
     77% {
         background-color: #FFDD00;
-        color:#FFDD00;
+        color: #FFDD00;
     }
 
     84% {

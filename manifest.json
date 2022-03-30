@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "RGB YouTube",
-  "version": "3.1",
+  "version": "4.0",
   "author": "Array in a Matrix",
 
   "description": "Makes the YouTube progress bar cycle through different RGB colors.",
@@ -21,6 +21,8 @@
 
   "content_scripts": [{
     "matches": ["*://*.youtube.com/*",
+      "*://odysee.com/*",
+      "*://vimeo.com/*",
       "*://invidious.snopyta.org/*",
       "*://invidious.xyz/*",
       "*://invidious.kavin.rocks/*",
@@ -40,7 +42,8 @@
       "*://vid.puffyan.us/*",
       "*://dev.viewtube.io/*",
       "*://tube.cthd.icu/*",
-      "*://invidious.048596.xyz/*"],
+      "*://invidious.048596.xyz/*"
+    ],
     "js": ["index.js"],
     "css": ["style.css"]
   }]
