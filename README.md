@@ -31,6 +31,8 @@ The following video sharing/hosting websites are also supported:
 
 <br>
 
+The target browser is Firefox but Firefox-based browsers should work as well. The extension has been tested on Brave browser (Chromium-based) and it works (there are warning in the manifest file).
+
 <a href="https://www.vecteezy.com/free-vector/rgb-color-wheel">
     <img alt="Color Wheel" src="./icons/icon-96.jpg"/>
     <br>
