@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "RGB YouTube",
-  "version": "4.0",
+  "version": "4.1",
   "author": "Array in a Matrix",
 
   "description": "Makes the YouTube progress bar cycle through different RGB colors.",
@@ -44,7 +44,6 @@
       "*://tube.cthd.icu/*",
       "*://invidious.048596.xyz/*"
     ],
-    "js": ["index.js"],
     "css": ["style.css"]
   }]
 
